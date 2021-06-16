@@ -144,12 +144,7 @@ body {
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 8rem;
-    
+    margin: 8rem 1rem 4rem;
 }
 
 .card-Principal{
@@ -168,6 +163,7 @@ body {
 
 #frase{
     margin: 1rem 1rem 1rem 1rem;
+    text-align: center;
 }
 
 .btn-otra{

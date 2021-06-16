@@ -2,11 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 body {
-    background: #E5E5E5;
+    background: #1c1c1c;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .titulo {
@@ -14,12 +16,11 @@ body {
 }
 
 .titulo_principal {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: #152B5A;
+    color: white;
     padding-top: 20px;
     font-weight: 74000;
-    background-color: #fff;
     padding-bottom: 20px;
     font-size: 20px;
 }
@@ -142,3 +143,48 @@ body {
     padding: 10px 59px;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 8rem;
+    
+}
+
+.card-Principal{
+    border: 1px solid #e0ff00;
+    box-shadow: 5px 10px #e0ff00;
+}
+
+.author{
+    text-align: center;
+}
+
+.gener{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#frase{
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.btn-otra{
+    color: #1c1c1c;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    transition: ease-in .500s;
+
+}
+
+.btn-otra:hover{
+    border: 3px solid #e0ff00;
+}

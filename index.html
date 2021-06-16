@@ -11,8 +11,10 @@
     <!--Fuentes Google-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-      <!---FONT AWESOME-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!---FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 <body>
@@ -21,7 +23,7 @@
         <h1 class="titulo_principal">Aplicación Frases</h1>
     </header>
     <!--Sitio busquedas-->
-    <div class="navegador">
+    <!-- <div class="navegador">
         <form id="formulario">
             <div>
                 <input type="text" id="buscar" class="buscador">
@@ -35,18 +37,31 @@
         <button id="buscaraleatorio" class="random_btn">
             Random
         </button>
-    </div>
+    </div> -->
     <!--Frases-->
-    <div class="frases">
-        <h1 class="autor" id="autor">Bill gates</h1>
-        <div class="container_frases">
+    <!-- <div class="frases" id="frases">
+        <template id="frase">
+            <h1 class="autor" id="autor">Bill gates</h1>
+            <div class="container_frases" id="grid-frases">
+                <div class="frase1">
+                    <h3 class="genero__frase">Technology</h3>
+                    <p class="texto1">“The first rule of any technology used in a business is that automation applied to
+                        an efficient operation will magnify the efficiency. The second is that automation applied to an
+                        inefficient operation will magnify the inefficiency.”</p>
+                </div>
+        </template>
+    </div> -->
+    <div class="container">
+        <div class="card-Principal">
+            <h1 class="author">Autor: <span id="autor"></span></h1>
+            <h2 class="gener">Genero: <span id="genero"></span></h2>
+            <h3 id="frase"></h3>
 
-        <div class="frase1">
-            <h3 class="genero__frase">Technology</h3>
-            <p class="texto1">“The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”</p>
+            <input class="btn-otra" type="button" value="Otra Frase" onclick="location.reload()" />
         </div>
-        
     </div>
-    </div>
+
+    <script src="index.js"></script>
 </body>
+
 </html>

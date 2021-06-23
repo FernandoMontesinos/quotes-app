@@ -4,7 +4,8 @@ function obtenerFrases() {
     .then( resultado => resultado.json())
     .then( datos => {
         const containerInfoFrases = datos.data
-        console.log(containerInfoFrases);
+        //console.log(containerInfoFrases);
+        console.log(datos);
 
         containerInfoFrases.forEach( datosFrase => {
             const { quoteAuthor, quoteGenre, quoteText} = datosFrase;

@@ -27,5 +27,5 @@ const mostrarFrase = data => {
         cardContainer.querySelector("#genero").textContent = quoteGenre;
         cardContainer.querySelector("#frase").textContent = quoteText;
     })   
-
 }
+

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!---FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="icon" href="assets/Logo DittoQuotes.ico">
+    <link rel="icon" href="src/assets/Logo DittoQuotes.ico">
 </head>
 
 <body>
@@ -23,12 +23,19 @@
     <header class="titulo">
         <h1 class="titulo_principal">Ditto Quotes</h1>
     </header>
+    <div class="containerBuscador">
+        <input class="inputBuscador" type="text" id="buscador" placeholder="Introduce Autor o Género">
+        <input type="button" value="Buscar" class="botonBuscar">
+    </div>
+    <div class="containerAleatorio">
+        <button value="Aleatorio" class="botonAleatorio">Aleatorio</button>
+    </div>
 
-    <div class="container">
+    <div class="containerFrase">
         <div class="cardPrincipal">
-            <h1 class="author">Autor: <span id="autor"></span></h1>
-            <h2 class="gener">Género: <span id="genero"></span></h2>
-            <h3 id="frase">holaxd</h3>
+            <h2 class="gener" id="genero"></h2>
+            <h1 class="author" id="autor"></h1>
+            <h3 id="frase"></h3>
 
             <input class="btn-otra" type="button" value="Otra Frase" onclick="location.reload()" />
         </div>

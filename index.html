@@ -28,18 +28,19 @@
         <input type="button" value="Buscar" class="botonBuscar">
     </div>
     <div class="containerAleatorio">
-        <button value="Aleatorio" class="botonAleatorio">Aleatorio</button>
+        <button value="Aleatorio" class="botonAleatorio" onclick="location.reload()">Aleatorio</button>
     </div>
 
-    <div class="containerFrase">
+    <template class="templateCardContainer">
         <div class="cardPrincipal">
             <h2 class="gener" id="genero"></h2>
             <h1 class="author" id="autor"></h1>
             <h3 id="frase"></h3>
-
-            <input class="btn-otra" type="button" value="Otra Frase" onclick="location.reload()" />
         </div>
-    </div>
+    </template>´
+
+
+    <div class="containerFrase" id="containerFrase"></div>
 
     <script src="src/app/index.js"></script>
 </body>

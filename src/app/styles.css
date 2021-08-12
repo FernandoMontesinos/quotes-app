@@ -25,70 +25,6 @@ body {
     font-size: 20px;
 }
 
-.navegador {
-    display: block;
-    border: 1px solid white;
-    height: 210px;
-}
-
-.buscador {
-    position: absolute;
-    width: 417px;
-    height: 42px;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    margin-top: 60px;
-    margin-left: 408px;
-    margin-right: 260px;
-    margin-bottom: 120px;
-    border: #fff;
-    padding: 5px;
-    background-repeat: no-repeat;
-    background-size: 18px;
-    display: flex;
-    align-items: center;
-    background-position: 380px center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-.btn {
-    position: absolute;
-    width: 106px;
-    height: 42px;
-    background: #2770F1;
-    border: #2770F1;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    margin-top: 60px;
-    margin-left: 850px;
-    margin-right: 50px;
-    margin-bottom: 120px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    color: #fff;
-}
-
-.random_btn {
-    position: absolute;
-    width: 133px;
-    height: 42px;
-    margin-top: 140px;
-    margin-left: 600px;
-    margin-bottom: 120px;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    color: #152B5A;
-    border: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    background-repeat: no-repeat;
-    background-position: 100px center;
-    padding-right: 25px;
-}
 
 .frases {
     display: block;
@@ -96,52 +32,13 @@ body {
     height: 1200px;
 }
 
-.autor {
-    color: #152B5A;
-    padding-top: 20px;
-    background-color: #fff;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .container_frases {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.frase1 {
-    width: 50%;
-    height: 259px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin: 100px 25px 25px 300px;
-    text-align: center;
-    margin-top: 20px;
-}
 
-.genero__frase {
-    width: 150px;
-    height: 40px;
-    color: #fff;
-    background: #5C97FF;
-    border-radius: 38px;
-    font-weight: 400;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.texto1 {
-    font-weight: 500;
-    color: #152B5A;
-    margin: 0 auto;
-    width: 100%;
-    padding: 10px 59px;
-}
 /*Frase aleatorioa*/
 
 .containerBuscador{
@@ -266,6 +163,10 @@ clip-path: var(--slice-0);
 
 .containerFrase{
     margin: 5rem 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
 }
 
 .cardPrincipal{
@@ -323,9 +224,16 @@ clip-path: var(--slice-0);
     .botonBuscar{
         width: 20%;
     }
-    
-    
-    
+    .containerFrase{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .cardPrincipal:first-of-type{
+       margin-top: 1rem;
+    }
+    .cardPrincipal{
+        margin-top: 3rem;
+    }
     #frase{
         font-size: 1rem;
     }

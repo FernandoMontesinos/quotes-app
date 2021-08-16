@@ -225,3 +225,15 @@ clip-path: var(--slice-0);
     }
     
 }
+
+/* Frase no disponible*/
+
+.containerNoQuotes{
+    display: block;
+    margin: 2rem;
+}
+
+.anuncioNoDisponible{
+    color: #fff;
+    text-align: center;
+}

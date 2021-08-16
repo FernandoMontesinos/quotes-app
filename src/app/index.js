@@ -1,6 +1,7 @@
 // Elementos html
 const templateCardContainer = document.querySelector('.templateCardContainer').content;
 const containerCards = document.getElementById('containerFrase');
+const containerNoQuotes = document.querySelector(".containerNoQuotes");
 
 const fragment = document.createDocumentFragment();
 
@@ -17,7 +18,7 @@ const obtenerFrasesAleatorias = async () => {
        const res = await fetch(url);
        const datos = await res.json();
        const { data } = datos;
-       console.log(data);
+       //console.log(data);
        mostrarFrasesAleatorias(data);
    } catch(error) {
        console.error();
@@ -42,9 +43,6 @@ const mostrarFrasesAleatorias = data => {
 const buscarFrases = async () => {
 
     let genreorautor = document.getElementById("buscador").value;
-    if(genreorautor.trim() === ''){
-      alert("No ha introducido nada xd")
-    }
 
     try{
     const authorRes = `https://quote-garden.herokuapp.com/api/v3/quotes/random?count=9&author=${genreorautor}`;
@@ -55,11 +53,13 @@ const buscarFrases = async () => {
     const genreData = (await respondegenero.json()).data;
 
     if (authorData.length > genreData.length) {
-        console.log(authorData);
+        //console.log(authorData);
         mostrarFrasesEncontradas(authorData);
+        noQuotes(authorData)
     } else {
-        console.log(genreData);
+        //console.log(genreData);
         mostrarFrasesEncontradas(genreData);
+        noQuotes(genreData);
     }
    } catch(error) {
        console.error();
@@ -68,6 +68,7 @@ const buscarFrases = async () => {
 
 /* Motramos las frases encontradas */
 const mostrarFrasesEncontradas = (authorData) => {
+    containerNoQuotes.innerHTML = ``;
     containerCards.innerHTML = ``;
     authorData.forEach(frase => {
         const {quoteAuthor, quoteGenre, quoteText} = frase;
@@ -80,8 +81,11 @@ const mostrarFrasesEncontradas = (authorData) => {
     containerCards.appendChild(fragment);
 }
 
-
-//Goberment
+const noQuotes = (authorData) => {
+    if(authorData < 1) {
+        containerNoQuotes.innerHTML= `<h1 class="anuncioNoDisponible">El Autor o Género que estás buscando no esta disponible :(</h1>`;   
+    }
+}
 
 
 

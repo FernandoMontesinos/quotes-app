@@ -23,12 +23,20 @@
     <header class="titulo">
         <h1 class="titulo_principal">Ditto Quotes</h1>
     </header>
+    <!--Buscador-->
     <div class="containerBuscador">
-        <input class="inputBuscador" type="text" id="buscador" placeholder="Introduce Autor o Género">
-        <input type="button" value="Buscar" class="botonBuscar">
+        <form class="formularioBuscador">
+            <input class="inputBuscador" type="text" id="buscador" placeholder="Introduce Autor o Género" autocomplete="off">
+            <input class="botonBuscar" type="button" value="Buscar" onclick="buscarFrases()">
+        </form>
     </div>
+    <!--Para buscar frase aleatoria-->
     <div class="containerAleatorio">
         <button value="Aleatorio" class="botonAleatorio" onclick="location.reload()">Aleatorio</button>
+    </div>
+
+    <!--Apartado de las cards-->
+    <div class="containerFrase" id="containerFrase">
     </div>
 
     <template class="templateCardContainer">
@@ -39,8 +47,6 @@
         </div>
     </template>´
 
-
-    <div class="containerFrase" id="containerFrase"></div>
 
     <script src="src/app/index.js"></script>
 </body>

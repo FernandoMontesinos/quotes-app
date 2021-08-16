@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    color: white;
 }
 
 body {
@@ -25,26 +24,24 @@ body {
     font-size: 20px;
 }
 
-
-.frases {
-    display: block;
-    background-color: #fff;
-    height: 1200px;
-}
-
-
 .container_frases {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
+/*Quitado por el momento 15/08/21*--------------------------------------------------------/
 
-/*Frase aleatorioa*/
-
-.containerBuscador{
+/* .containerBuscador{
     display: flex;
     justify-content: center;
     margin: 4rem 1rem 4rem 0rem; 
+    align-items: center;
+} */
+
+.formularioBuscador{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 1rem 4rem 0rem;
     align-items: center;
 }
 
@@ -57,6 +54,7 @@ body {
     margin: 0rem 1rem 0rem 0rem;
     padding: .5rem;
     font-size: 1rem;
+    color: #fff;
 }
 
 .botonBuscar{
@@ -67,6 +65,7 @@ body {
     width: 10%;
     height: 2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Boton Aleatorio*/
@@ -179,6 +178,7 @@ clip-path: var(--slice-0);
 
 .author{
     text-align: center;
+    color: #fff;
 }
 
 .gener{
@@ -198,28 +198,10 @@ clip-path: var(--slice-0);
 #frase{
     margin: 1rem 1rem 1rem 1rem;
     text-align: center;
+    color: #fff;
 }
 
-.btn-otra{
-    color: #1c1c1c;
-    border: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto;
-    width: 8rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    transition: ease-in .500s;
-
-}
-
-.btn-otra:hover{
-    border: 3px solid #e0ff00;
-}
-
-/* Responsive Desigb*/
+/* Responsive Design*/
 @media (max-width: 420px) {
     .botonBuscar{
         width: 20%;

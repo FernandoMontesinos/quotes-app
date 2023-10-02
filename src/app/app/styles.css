@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #1c1c1c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo {
+    display: block;
+}
+
+.titulo_principal {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-weight: 74000;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.container_frases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*Quitado por el momento 15/08/21*--------------------------------------------------------/
+
+/* .containerBuscador{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 1rem 4rem 0rem; 
+    align-items: center;
+} */
+
+.formularioBuscador{
+    display: flex;
+    justify-content: center;
+    margin: 4rem 1rem 4rem 0rem;
+    align-items: center;
+}
+
+.inputBuscador{
+    background-color: #1c1c1c;
+    width: 55%;
+    height: 3rem;
+    border: 1px solid #e0ff00;
+    box-shadow: 5px 5px #e0ff00;
+    margin: 0rem 1rem 0rem 0rem;
+    padding: .5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.botonBuscar{
+    color: #1c1c1c;
+    background-color: #e0ff00;
+    border-radius: .5rem;
+    border: none;
+    width: 10%;
+    height: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Boton Aleatorio*/
+.containerAleatorio{
+    display: flex;
+    justify-content: center;
+}
+
+.botonAleatorio, .botonAleatorio::after{
+    color: #fff;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    background: linear-gradient(45deg, transparent 5%, #1c1c1c 5%);
+    box-shadow: 6px 0px 0px #e0ff00;
+    outline: transparent;
+    border: 1px solid #e0ff00;
+    position: relative;
+}
+
+.botonAleatorio::after {
+--slice-0: inset(50% 50% 50% 50%);
+--slice-1: inset(80% -6px 0 0);
+--slice-2: inset(50% -6px 30% 0);
+--slice-3: inset(10% -6px 85% 0);
+--slice-4: inset(40% -6px 43% 0);
+--slice-5: inset(80% -6px 5% 0);
+    
+content: 'ALEATORIO';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(45deg, transparent 3%, #e0ff00 3%, #e0ff00 5%, #e0ff00 5%);
+text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+clip-path: var(--slice-0);
+}
+
+.botonAleatorio:hover::after{
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+}
+
+/* Apartado frases*/
+
+.containerFrase{
+    margin: 5rem 3rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+.cardPrincipal{
+    border: 1px solid #e0ff00;
+    box-shadow: 5px 10px #e0ff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author{
+    text-align: center;
+    color: #fff;
+}
+
+.gener{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #e0ff00;
+    color: #1c1c1c;
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: .5rem;
+    box-shadow: 5px 6px 10px 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 5px 6px 10px 6px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 6px 10px 6px rgba(0,0,0,0.5);
+    align-self: center
+}
+
+#frase{
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Responsive Design*/
+@media (max-width: 420px) {
+    .botonBuscar{
+        width: 20%;
+    }
+    .containerFrase{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .cardPrincipal:first-of-type{
+       margin-top: 1rem;
+    }
+    .cardPrincipal{
+        margin-top: 3rem;
+    }
+    #frase{
+        font-size: 1rem;
+    }
+    #autor{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+}
+
+/* Frase no disponible*/
+
+.containerNoQuotes{
+    display: block;
+    margin: 2rem;
+}
+
+.anuncioNoDisponible{
+    color: #fff;
+    text-align: center;
+}

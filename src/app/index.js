@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const obtenerFrasesAleatorias = async () => {
    try{
-       const url = 'https://quote-garden.herokuapp.com/api/v3/quotes/random?count=9';
+       const url = 'https://quote-garden.onrender.com/api/v3/quotes/random?count=9';
        const res = await fetch(url);
        const datos = await res.json();
        const { data } = datos;
@@ -45,8 +45,8 @@ const buscarFrases = async () => {
     let genreorautor = document.getElementById("buscador").value;
 
     try{
-    const authorRes = `https://quote-garden.herokuapp.com/api/v3/quotes/random?count=9&author=${genreorautor}`;
-    const genreRes = `https://quote-garden.herokuapp.com/api/v3/quotes/random?count=9&genre=${genreorautor}`;
+    const authorRes = `https://quote-garden.onrender.com/api/v3/quotes/random?count=9&author=${genreorautor}`;
+    const genreRes = `https://quote-garden.onrender.com/api/v3/quotes/random?count=9&genre=${genreorautor}`;
     const respondeautor = await fetch(authorRes);
     const respondegenero = await fetch(genreRes);
     const authorData = (await respondeautor.json()).data;
